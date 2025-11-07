@@ -6,8 +6,8 @@ Helm chart for STAGING environment.
 
 - **Environment**: STAGING
 - **Auto-Deploy**: No (manual via essesseff)
-- **Namespace**: `staging`
-- **Ingress**: `hello-world-staging.example.com`
+- **Namespace**: `essesseff-hello-world-go-template`
+- **Ingress**: `example.com/hello-world-staging`
 
 ## Updates
 
