@@ -12,3 +12,5 @@ Helm chart for STAGING environment.
 ## Updates
 
 This repository in combination with the app-of-apps environment-specific deployment config determine when/if/how deployments occur via Argo CD.  This repository is updated by essesseff platform when STAGING deployments are to occur as per Release Engineer manual decision.
+
+Typically, only the values.yaml file should be manually altered, while any/all other changes in the repository are made via essesseff deployment orchestration.
