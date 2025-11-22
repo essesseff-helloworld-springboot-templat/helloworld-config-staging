@@ -1,4 +1,4 @@
-# Hello World Config - STAGING
+# hello-world Config - STAGING
 
 Helm chart for STAGING environment.
 
