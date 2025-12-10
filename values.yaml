@@ -35,7 +35,7 @@ service:
   targetPort: 8080
 
 ingress:
-  enabled: true
+  enabled: false
   className: "alb"  # Changed from "nginx" to "alb"
   annotations:
     # AWS ALB Controller annotations
