@@ -6,7 +6,7 @@ Helm chart for STAGING environment.
 
 - **Environment**: STAGING
 - **Auto-Deploy**: Yes (typically by Release Engineer decision via essesseff)
-- **Namespace**: `essesseff-hello-world-go-template`
+- **Namespace**: `essesseff-hello-world-flask-template`
 - **Ingress**: `example.com/hello-world-staging`
 
 ## Updates
