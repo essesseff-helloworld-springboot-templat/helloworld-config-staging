@@ -1,4 +1,4 @@
-# hello-world Config - STAGING
+# helloworld Config - STAGING
 
 Helm chart for STAGING environment.
 
@@ -6,8 +6,8 @@ Helm chart for STAGING environment.
 
 - **Environment**: STAGING
 - **Auto-Deploy**: Yes (typically by Release Engineer decision via essesseff)
-- **Namespace**: `essesseff-hello-world-flask-template`
-- **Ingress**: `example.com/hello-world-staging`
+- **Namespace**: `essesseff-helloworld-springboot-templat`
+- **Ingress**: `example.com/helloworld-staging`
 
 ## Updates
 

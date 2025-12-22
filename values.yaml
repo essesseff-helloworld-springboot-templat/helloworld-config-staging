@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   registry: ghcr.io
-  repository: essesseff-hello-world-flask-template/hello-world
+  repository: essesseff-helloworld-springboot-templat/helloworld
   pullPolicy: IfNotPresent
   tag: 1.0.0-abc123-20250930T120000Z
 
@@ -44,7 +44,7 @@ ingress:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
     
     # Group all environments into one ALB (cost-efficient)
-    alb.ingress.kubernetes.io/group.name: hello-world
+    alb.ingress.kubernetes.io/group.name: helloworld
     alb.ingress.kubernetes.io/group.order: '3'  # Increment for each env (1=dev, 2=qa, 3=staging, 4=prod)
     
     # Health checks
@@ -62,11 +62,11 @@ ingress:
   hosts:
     - host: example.com  # Shared domain for all environments
       paths:
-        - path: /hello-world-staging  # Path-based routing
+        - path: /helloworld-staging  # Path-based routing
           pathType: Prefix
   #        backend:
   #          service:
-  #            name: hello-world-staging  # Must match your Service name
+  #            name: helloworld-staging  # Must match your Service name
   #            port:
   #              number: 80  # Service port (not targetPort)
   
