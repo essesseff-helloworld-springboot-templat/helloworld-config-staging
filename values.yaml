@@ -48,7 +48,7 @@ ingress:
     alb.ingress.kubernetes.io/group.order: '3'  # Increment for each env (1=dev, 2=qa, 3=staging, 4=prod)
     
     # Health checks
-    alb.ingress.kubernetes.io/healthcheck-path: /health
+    alb.ingress.kubernetes.io/healthcheck-path: /actuator/health   # Changed from /health
     alb.ingress.kubernetes.io/healthcheck-interval-seconds: '30'
     alb.ingress.kubernetes.io/healthcheck-timeout-seconds: '5'
     alb.ingress.kubernetes.io/healthy-threshold-count: '2'
@@ -92,17 +92,21 @@ autoscaling:
 
 livenessProbe:
   httpGet:
-    path: /health
+    path: /actuator/health/liveness   # Changed from /health
     port: 8080
-  initialDelaySeconds: 10
+  initialDelaySeconds: 30              # Increased from 10
   periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 3
 
 readinessProbe:
   httpGet:
-    path: /ready
+    path: /actuator/health/readiness   # Changed from /ready
     port: 8080
-  initialDelaySeconds: 5
-  periodSeconds: 5
+  initialDelaySeconds: 30              # Increased from 5
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 3
 
 env:
   - name: ENVIRONMENT
